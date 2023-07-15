@@ -147,7 +147,7 @@
     
   }
 
-  .trigger-enter-active{
+  .trigger-enter-active .dropdown{
     opacity: 1;
   }
 
@@ -234,13 +234,13 @@
   const nav = document.querySelector('.top');
 
   function handleEnter(){
-    this.classList.add('.trigger-enter');
-    setTimeout(() => this.classList.add('.trigger-enter-active'), 150);
+    this.classList.add('trigger-enter');
+    setTimeout(() => this.classList.add('trigger-enter-active'), 150);
 
   }
 
   function handleLeave() {
-    console.log('leave');
+    this.classList.remove('trigger-leave', 'trigger-enter-active');
 
   }
 
